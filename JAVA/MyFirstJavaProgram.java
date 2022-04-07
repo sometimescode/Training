@@ -59,12 +59,15 @@ class MyFirstJavaProgram {
      
      //how to make a new branch
      //git checkout -b + name of branch
-     //git checkout + name of branch
+     //git checkout + name of branch (move between branches)
 
      //git fetch <- lookup when
 
      //merging
-
+     //make sure you're on the branch you want merge to occur
+     //use git checkout + name of branch to do so
+     //git merge master2
+     //git commit -m "merged with master2"
 
 
 
