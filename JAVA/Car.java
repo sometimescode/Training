@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Car {
+    //activity 1
     private String name;
     private String model;
     private String brand;
@@ -8,7 +9,7 @@ public class Car {
     private String location;
     //activity 3
     private double gas;
-    //activity 4
+    //activity 4 but also used in 3 to hold the fixed value (15.5)
     private double gasConsumption;
 
     //activity 1
@@ -31,7 +32,7 @@ public class Car {
         this.gasConsumption = 15.5;
     }
 
-    //activity 4 without gas
+    //activity 4
     public Car(double gasConsumption, String name, String model, String brand, int year, String location, double gas) {
         this.name = name;
         this.model = model;
@@ -43,7 +44,7 @@ public class Car {
     }
 
 
-    //activity 3
+    //activity 3, gasConsumption was fixed value (15.5), but since activity 4 added gasConsumption, it's being used instead
     public double calculateGasUsed(double distance) {
         return distance / gasConsumption;
     }
@@ -74,6 +75,7 @@ public class Car {
         this.gas = this.gas - gasUsed;
     }
 
+    //getters and setters for all attributes of class
     public String getName() {
         return name;
     }
