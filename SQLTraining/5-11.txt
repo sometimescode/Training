@@ -1,0 +1,62 @@
+insert into table(column1, column2)
+values (x, y);
+
+sample of NOT NULL and DEFAULT:
+last_name varchar(255) not null default 'Empty',
+
+CHECK:
+create table tablename(
+age int,
+check (age>=18)
+);
+
+ALTER: //note that even checking needs ADD keyword
+alter table students
+add age int,
+add check(age>=18);
+
+PRIMARY KEY AND AUTO INCREMENT:
+id int not null primary key auto_increment,
+
+ORDER BY (default sorting is ID or primary key):
+select * from persons order by(age) asc;
+select * from persons order by(age) desc;
+
+LIMIT (preferred to be in the last part of the line if present):
+select * from persons order by(age) desc limit 3;
+
+MIN AND MAX:
+select min(age) from persons;
+select max(age) from persons;
+
+SELECT WITHIN A WHERE CLAUSE:
+select * from persons where age = (select min(age) from persons);
+
+(should output inbetween values)
+select * from persons where age > (select min(age) from persons) AND where age < (select max(age) from persons);
+(negation)
+select * from persons where NOT age > (select min(age) from persons);
+
+COUNT:
+select COUNT(age) from persons where age=22;
+
+AVERAGE:
+select AVG(age) from persons;
+
+SUM:
+select sum(age) from persons;
+------------------------
+FROM ACTIVITY (STUDENTS):
+[Concat and Aliasing]
+SELECT CONCAT(last_name, ",", first_name) AS Name, grade as 'Final Grade' from students;
+
+[By first letter]
+Select * from students where left(last_name, 1) = 'C';
+-------------------------
+
+LIKE, IN/NOT IN, BETWEEN/NOT BETWEEN discussed;
+
+
+
+
+

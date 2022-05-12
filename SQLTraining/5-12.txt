@@ -1,0 +1,14 @@
+INNER JOIN doesn't include fields if one side is null
+<> in WHERE
+
+SELF JOIN
+SELECT A.name as EMPLOYEE1, B.name as EMPLOYEE2
+FROM EMPLOYEE A, EMPLOYEE B
+WHERE A.deptId = B.deptId
+ORDER BY A.deptId;
+
+
+UNION = two tables with no relationship
+SELECT name from EMPLOYEE
+UNION
+SELECT deptName from DEPARTMENT;
